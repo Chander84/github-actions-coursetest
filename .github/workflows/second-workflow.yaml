@@ -1,0 +1,33 @@
+name: Second Workflow
+on:
+    workflow_dispatch:
+jobs:
+    second-job:
+        name: First Job
+        runs-on: ubuntu-latest
+        steps:
+            - name: first step from first job
+              #uses: actions/checkout@v3
+            #- name: Run a one-line script
+              run: |
+               echo "first step from first job"
+               date
+            - name: second step from first job
+              run: |
+                 echo "second step from first job"
+                 pwd
+    second-job2:
+        name: Second Job
+        runs-on: ubuntu-latest
+        steps:
+            - name: first step from second job2
+              #uses: actions/checkout@v3
+            #- name: Run a one-line script
+              run: |
+               echo "first step from second job2"
+               date
+            - name: second step from second job2
+              run: |
+                 echo "second step from second job2"
+                 pwd
+        
